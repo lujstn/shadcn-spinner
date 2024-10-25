@@ -51,7 +51,7 @@ export default function Home() {
               View Tweet
             </Link>
 
-            <Link href="https://github.com/alipiopereira/shadcn-spinner" target="_blank" className="flex flex-row items-center px-3 py-1.5 hover:bg-zinc-100 hover:dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70">
+            <Link href="https://github.com/allipiopereira/shadcn-spinner" target="_blank" className="flex flex-row items-center px-3 py-1.5 hover:bg-zinc-100 hover:dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70">
               <GithubIcon width={20} height={20} className="mr-1" color="fill-black dark:fill-white" />
               allipiopereira/shadcn-spinner
             </Link>

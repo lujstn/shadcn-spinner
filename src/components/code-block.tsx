@@ -45,7 +45,7 @@ async function highlightCode(code: string, theme: string | undefined) {
     .use(remarkRehype)
     .use(rehypePrettyCode, {
       keepBackground: false,
-      theme: theme === "dark" ? "vesper" : "github-light-default",
+      theme: theme === "light" ? "github-light-default" : "vesper",
     })
     .use(rehypeStringify)
     .process(code);

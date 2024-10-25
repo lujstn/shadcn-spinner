@@ -47,7 +47,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-end justify-end w-72 gap-4">
-            <Link href="https://x.com/alipiopereira7/status/1849661363171319979" target="_blank" className="flex flex-row items-center px-3 py-1.5 bg-zinc-100 dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70">
+            <Link href="https://x.com/alipiopereira7/status/1849664054974935343" target="_blank" className="flex flex-row items-center px-3 py-1.5 bg-zinc-100 dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70">
               View Tweet
             </Link>
 

@@ -8,6 +8,7 @@ import rehypeStringify from "rehype-stringify";
 import rehypePrettyCode from "rehype-pretty-code";
 import CodeCopy from "./code-copy";
 import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 interface CodeBlockProps {
   code: string;
@@ -15,13 +16,16 @@ interface CodeBlockProps {
 }
 
 export default function CodeBlock({ code }: CodeBlockProps) {
-  const [highlightedCode, setHighlightedCode] = React.useState<string>("");
+  const [highlightedCode, setHighlightedCode] = useState<string>("");
   const { theme } = useTheme();
 
-  React.useEffect(() => {
-    highlightCode(code, theme).then((highlightedCode) => {
-      setHighlightedCode(highlightedCode);
-    });
+  useEffect(() => {
+    const highlight = async () => {
+      const highlighted = await highlightCode(code, theme);
+      setHighlightedCode(highlighted);
+    };
+
+    highlight();
   }, [code, theme]);
 
   return (
@@ -45,7 +49,7 @@ async function highlightCode(code: string, theme: string | undefined) {
     .use(remarkRehype)
     .use(rehypePrettyCode, {
       keepBackground: false,
-      theme: theme === "light" ? "github-light-default" : "vesper",
+      theme: theme === "light" ? "github-light" : "vesper",
     })
     .use(rehypeStringify)
     .process(code);

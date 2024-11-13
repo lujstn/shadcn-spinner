@@ -1,4 +1,6 @@
-![Shadcn Spinner](https://github.com/allipiopereira/shadcn-spinner/tree/main/public/og.png)
+<p align="center">
+<img src="./public/og.png" />
+</p>
 
 # Shadcn Spinner
 Inspired by the Radix UI.

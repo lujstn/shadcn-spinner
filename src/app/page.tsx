@@ -79,7 +79,7 @@ export default function Home() {
 
           <CodeBlock code={`
 \`\`\`
-bunx shadcn add https://shadcn-spinner.vercel.app/api/r/spinner
+npx shadcn add https://shadcn-spinner.vercel.app/api/r/spinner
 \`\`\`
 `} />
         </div>

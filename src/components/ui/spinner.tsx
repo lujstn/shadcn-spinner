@@ -31,8 +31,9 @@ const Spinner = React.forwardRef<HTMLSpanElement, SpinnerProps>(
     const Comp = asChild ? Slot : "span";
 
     const [bgColorClass, filteredClassName] = React.useMemo(() => {
-      const bgClass = className?.match(/(?:dark:bg-|bg-)\S+/g) || [];
-      const filteredClasses = className?.replace(/(?:dark:bg-|bg-)\S+/g, '').trim();
+      const bgClass = className?.match(/(?:dark:bg-|bg-)[a-zA-Z0-9-]+/g) || [];
+      const filteredClasses = className?.replace(/(?:dark:bg-|bg-)[a-zA-Z0-9-]+/g, "").trim();
+
       return [bgClass, filteredClasses];
     }, [className]);
 

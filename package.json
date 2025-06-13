@@ -5,7 +5,7 @@
   "private": false,
   "scripts": {
     "dev": "pnpm --filter shadcn-spinner-site dev",
-    "build": "pnpm --filter shadcn-spinner build && pnpm --filter shadcn-spinner-site build",
+    "build": "NODE_ENV=production pnpm --filter shadcn-spinner build && NODE_ENV=production pnpm --filter shadcn-spinner-site build",
     "start": "pnpm --filter shadcn-spinner-site start",
     "lint": "pnpm --filter shadcn-spinner-site lint"
   },

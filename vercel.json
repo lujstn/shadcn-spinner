@@ -1,6 +1,7 @@
 {
-  "buildCommand": "pnpm --filter shadcn-spinner build && pnpm --filter shadcn-spinner-site build",
+  "buildCommand": "NODE_ENV=production pnpm --filter shadcn-spinner build && NODE_ENV=production pnpm --filter shadcn-spinner-site build",
   "outputDirectory": "site/.next",
   "installCommand": "pnpm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "cwd": "site"
 }

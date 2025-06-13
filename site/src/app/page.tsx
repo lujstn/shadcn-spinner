@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import CodeBlock from "@/components/code-block";
 import { GithubIcon, SpinnerIcon } from "@/components/icons";
 import { ThemeModeToggle } from "@/components/theme-mode-toggle";
-import { Spinner } from "@/components/ui/spinner";
+import { Spinner } from "../../../lib/spinner";
 import Link from "next/link";
 import Image from "next/image";
 

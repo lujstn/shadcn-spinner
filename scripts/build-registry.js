@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// Read the spinner component source
-const componentPath = path.join(__dirname, '../src/components/ui/spinner.tsx');
+// Read the spinner component source from lib
+const componentPath = path.join(__dirname, '../lib/spinner.tsx');
 const componentContent = fs.readFileSync(componentPath, 'utf8');
 
 // Create the registry object
@@ -45,11 +45,25 @@ const registryData = {
 };
 
 // Ensure the output directory exists
-const outputDir = path.join(__dirname, '../src/app/api/r/spinner');
+const outputDir = path.join(__dirname, '../site/src/app/api/r/spinner');
 fs.mkdirSync(outputDir, { recursive: true });
 
 // Write the spinner.json file
 const outputPath = path.join(outputDir, 'spinner.json');
 fs.writeFileSync(outputPath, JSON.stringify(registryData, null, 2));
 
-console.log(`✅ Registry file generated at: ${outputPath}`);
+// Also create the route.ts file
+const routeContent = `import spinner from "./spinner.json";
+
+export async function GET() {
+  return new Response(JSON.stringify(spinner), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+`;
+
+const routePath = path.join(outputDir, 'route.ts');
+fs.writeFileSync(routePath, routeContent);
+
+console.log(`✅ Registry files generated at: ${outputDir}`);

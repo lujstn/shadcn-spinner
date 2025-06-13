@@ -40,4 +40,4 @@ yarn-error.log*
 next-env.d.ts
 
 # generated registry files
-src/app/api/r/spinner/spinner.json
+site/src/app/api/r/

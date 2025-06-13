@@ -2,13 +2,15 @@
 <img src="./site/public/og.png" />
 </p>
 
-# Shadcn Spinner
+# shadcn-spinner-v4
+
+> **_This project is [@lujstn](https://github.com/lujstn)'s fork of the [original](https://github.com/allipiopereira/shadcn-spinner), entirely rebuilt for Tailwind v4's new CSS-first approach_** 🌟
 
 A lightweight, customizable loading spinner component designed for **shadcn/ui** projects.
 
 Inspired by [Radix UI](https://radix-ui.com/) design principles. Built for the [shadcn/ui](https://ui.shadcn.com/) ecosystem.
 
-**🎯 Try it live:** https://shadcn-spinner.vercel.app
+**🎯 Try it live:** https://shadcn-spinner-v4.vercel.app
 
 ## ✨ Features
 
@@ -26,7 +28,7 @@ Inspired by [Radix UI](https://radix-ui.com/) design principles. Built for the [
 Add the spinner component directly to your shadcn project:
 
 ```bash
-npx shadcn add https://shadcn-spinner.vercel.app/api/r/spinner
+npx shadcn add https://shadcn-spinner-v4.vercel.app/api/r/spinner
 ```
 
 ### Method 2: Curl Installation
@@ -34,7 +36,7 @@ npx shadcn add https://shadcn-spinner.vercel.app/api/r/spinner
 Copy the spinner component to your project:
 
 ```bash
-curl -o components/ui/spinner.tsx https://shadcn-spinner.vercel.app/api/r/spinner.json
+curl -o components/ui/spinner.tsx https://shadcn-spinner-v4.vercel.app/api/r/spinner.json
 ```
 
 ### Method 3: Manual Installation
@@ -81,7 +83,7 @@ This repository uses a clean **lib + site** structure:
 shadcn-spinner/
 ├── lib/
 │   └── spinner.tsx          # Core component
-├── site/                    # Website (shadcn-spinner.vercel.app)
+├── site/                    # Website (shadcn-spinner-v4.vercel.app)
 │   ├── src/app/
 │   └── components/
 ├── scripts/

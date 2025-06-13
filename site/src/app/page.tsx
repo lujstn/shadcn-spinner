@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import CodeBlock from "@/components/code-block";
@@ -33,11 +33,17 @@ export default function Home() {
         <div className="flex flex-row justify-between">
           <div className="flex flex-col gap-2">
             <div className="flex flex-row items-start space-x-1 opacity-70">
-              <span className="px-2 text-sm bg-zinc-100/60 rounded-lg dark:text-black">New</span>
+              <span className="px-2 text-sm bg-zinc-100/60 rounded-lg dark:text-black">
+                New
+              </span>
             </div>
 
             <div className="flex items-center space-x-1">
-              <SpinnerIcon width={30} height={30} color="fill-black dark:fill-white" />
+              <SpinnerIcon
+                width={30}
+                height={30}
+                color="fill-black dark:fill-white"
+              />
               <h2 className="text-3xl font-semibold">Shadcn Spinner</h2>
             </div>
 
@@ -47,13 +53,26 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-end justify-end w-72 gap-4">
-            <Link href="https://x.com/alipiopereira7/status/1849664054974935343" target="_blank" className="flex flex-row items-center px-3 py-1.5 bg-zinc-100 dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70">
+            <Link
+              href="https://x.com/alipiopereira7/status/1849664054974935343"
+              target="_blank"
+              className="flex flex-row items-center px-3 py-1.5 bg-zinc-100 dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70"
+            >
               View Tweet
             </Link>
 
-            <Link href="https://github.com/allipiopereira/shadcn-spinner" target="_blank" className="flex flex-row items-center px-3 py-1.5 hover:bg-zinc-100 hover:dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70">
-              <GithubIcon width={20} height={20} className="mr-1" color="fill-black dark:fill-white" />
-              allipiopereira/shadcn-spinner
+            <Link
+              href="https://github.com/lujstn/shadcn-spinner-v4"
+              target="_blank"
+              className="flex flex-row items-center px-3 py-1.5 hover:bg-zinc-100 hover:dark:bg-zinc-700 rounded-full text-sm font-medium opacity-70"
+            >
+              <GithubIcon
+                width={20}
+                height={20}
+                className="mr-1"
+                color="fill-black dark:fill-white"
+              />
+              lujstn/shadcn-spinner-v4
             </Link>
           </div>
         </div>
@@ -76,12 +95,13 @@ export default function Home() {
             Adding the component to your project
           </h2>
 
-
-          <CodeBlock code={`
+          <CodeBlock
+            code={`
 \`\`\`
-npx shadcn add https://shadcn-spinner.vercel.app/api/r/spinner
+npx shadcn add https://shadcn-spinner-v4.vercel.app/api/r/spinner
 \`\`\`
-`} />
+`}
+          />
         </div>
 
         <div>
@@ -90,23 +110,48 @@ npx shadcn add https://shadcn-spinner.vercel.app/api/r/spinner
             Now just use it.
           </h2>
 
-          <CodeBlock code={`
+          <CodeBlock
+            code={`
 \`\`\`ts
 <Spinner size="sm" className="bg-black dark:bg-white" />
 \`\`\`
-`} />
+`}
+          />
         </div>
       </div>
 
       <footer className="flex flex-row items-center mt-20 gap-1">
         Created by
-        <Link href="https://github.com/allipiopereira" target="_blank" className="flex flex-row items-center gap-1 px-2 py-0.5 hover:bg-zinc-100 hover:dark:bg-zinc-700 rounded-full">
-          <Image src="https://github.com/allipiopereira.png" alt="Alípio Pereira" width={22} height={22} className="rounded-full" />
+        <Link
+          href="https://github.com/allipiopereira"
+          target="_blank"
+          className="flex flex-row items-center gap-1 px-2 py-0.5 hover:bg-zinc-100 hover:dark:bg-zinc-700 rounded-full"
+        >
+          <Image
+            src="https://github.com/allipiopereira.png"
+            alt="Alípio Pereira"
+            width={22}
+            height={22}
+            className="rounded-full"
+          />
           <span className="text-sm font-medium">@allpiopereira</span>
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="https://github.com/lujstn"
+          target="_blank"
+          className="flex flex-row items-center gap-1 px-2 py-0.5 hover:bg-zinc-100 hover:dark:bg-zinc-700 rounded-full"
+        >
+          <Image
+            src="https://github.com/lujstn.png"
+            alt="Lucas Johnston Kurilov (@lujstn)"
+            width={22}
+            height={22}
+            className="rounded-full"
+          />
+          <span className="text-sm font-medium">@lujstn</span>
         </Link>
-
         <span className="opacity-50 mr-2">|</span>
-
         Theme <ThemeModeToggle />
       </footer>
     </main>

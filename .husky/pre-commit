@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Build registry files before commit
+node scripts/build-registry.js
+
+# Add the generated files to the commit
+git add src/app/api/r/spinner/spinner.json

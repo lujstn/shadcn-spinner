@@ -1,7 +1,7 @@
 {
   "name": "shadcn-spinner",
   "description": "A spinner component for Shadcn - Displays an animated loading indicator, inspired by the Radix UI spinner design.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "main": "./spinner.tsx",
   "types": "./spinner.tsx",

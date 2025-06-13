@@ -2,5 +2,5 @@
   "buildCommand": "pnpm --filter shadcn-spinner build && pnpm --filter shadcn-spinner-site build",
   "outputDirectory": "site/.next",
   "installCommand": "pnpm install",
-  "framework": "next"
+  "framework": "nextjs"
 }

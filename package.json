@@ -1,11 +1,11 @@
 {
-  "name": "shadcn-spinner",
+  "name": "shadcn-spinner-root",
   "description": "A spinner component for Shadcn - Displays an animated loading indicator, inspired by the Radix UI spinner design.",
   "version": "0.1.0",
   "private": false,
   "scripts": {
     "dev": "pnpm --filter shadcn-spinner-site dev",
-    "build": "pnpm --filter @shadcn/spinner build && pnpm --filter shadcn-spinner-site build",
+    "build": "pnpm --filter shadcn-spinner build && pnpm --filter shadcn-spinner-site build",
     "start": "pnpm --filter shadcn-spinner-site start",
     "lint": "pnpm --filter shadcn-spinner-site lint"
   },
